@@ -1,0 +1,63 @@
+<h1>Armory</h1>
+
+<div class="row">
+    <div class="col-xs-4"> 
+        <div class="row">
+            <div class="col-xs-12">
+                Picture
+            </div>
+        </div>  
+        
+        <br>
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <p>Lorem ipsum</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-8">
+        
+        <div class="row">
+            <div class="col-xs-8">
+                <h4>Overall Wallet Privacy</h4>
+            </div>
+            <div class="col-xs-4">
+                <h5>Total Score</h5>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <overall-rating rating-model="categoryScores"></overall-rating>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="row">
+            <div class="col-xs-8">
+                <h4>Categories</h4>
+            </div>
+            <div class="col-xs-4">
+                <h5>Category Score</h5>
+            </div>
+        </div>
+        
+        
+        <div ng-repeat="category in categoryScores" >
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>{{categoryTitles[$index]}}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <privacy-rating rating-model="category"></privacy-rating>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
